@@ -3,10 +3,13 @@ function goat(username, originalPoints, tagList)
     this.name = username;
     this.healthyPoints = orignalPoints; 
     this.currnetLevel = "level/0.png";
-
+    this.tagList = null
+        
+    function setList(taglist){
+        this.tagList = tagList.sort()
+    }
     
-    this.pointsRecalculator = function(foodTag, tagList){
-        tagList = tagList.sort();
+    this.pointsRecalculator = function (foodTag){
         tagListFindValue = tagList.find(foodTag);
         //Check if the tag exists in the list 
         if(typeof tagListFindValue == 'undefined')
