@@ -1,0 +1,58 @@
+<html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+
+		<style>
+			.page1-box {
+			    width: 100%;
+			    /*overflow:hidden;*/
+			}
+			.page1 {
+			    width: 100%;
+			    height: 100%;
+			    /*position: relative;*/
+			}
+			.page-bg {
+			    width: 100%;
+			    height: 100%;
+			    background-image: url('./bg-large.png');
+			    background-position:center center;
+			    background-size:cover;
+			    transform:scale(1);
+			    transition:all .5s ease-in;
+			    z-index: -1;
+			    position: absolute;
+			}
+			.page-bg.zout {
+			    transform:scale(0.5);
+			}
+			.page_container {
+			    color: #fff;
+			    text-align: center;
+			    z-index: 1;
+			}
+		</style>
+	</head>
+
+    <div class="page1-box">
+	    <section class="page1">
+	        <div class="page-bg"></div>
+	        <div class="page_container">
+	            <div class="text">
+		            <p>
+		            	Keffiyeh yr 8-bit subway tile fixie. IPhone tote bag franzen activated charcoal, ennui kitsch wayfarers chambray art party church-key tattooed drinking vinegar you probably haven't heard of them food truck. Quinoa shoreditch ramps, fashion axe distillery pickled whatever aesthetic edison bulb retro organic gentrify tofu viral. Cray cliche VHS, knausgaard tumeric jianbing DIY quinoa disrupt microdosing crucifix seitan. Pop-up succulents bicycle rights pug actually la croix, man bun mumblecore stumptown before they sold out health goth butcher kitsch. Hexagon YOLO drinking vinegar pok pok photo booth church-key. Intelligentsia pickled slow-carb helvetica pop-up artisan squid, unicorn banh mi neutra green juice shoreditch.
+		            </p>
+	            </div>
+	        </div>
+	    </section>
+	</div>
+
+	<script>
+		$(".page1").mouseenter(function() {
+		    $(".page-bg").addClass("zout");
+		});
+		// $(".page1").mouseleave(function() {
+		//     $(".page-bg").leaveClass("zout");
+		// });
+	</script>
+        </html>
