@@ -34,11 +34,11 @@
            
         </script>
         <div style="position: absolute; left: 15px; top: 20px;"> 
-            <a class = "cta" href="https://google.ca">
+            <a class = "cta" href="#">
                 <img class = "goat" src="sheep.png" width="50" height="50" onclick="DoSomething();" />
             </a>
         </div>
-        <div style="position: absolute; left: 30px; top: 100px;"> 
+        <div style="position: absolute; left: 30px; top: 120px;"> 
             <a class="brocoli" href="#">
                 <img class = "broco" src = "broccoli.png" width="50" height="50" onclick = "DoSomething();"/>
             </a>
@@ -54,7 +54,7 @@
             </nav>
         </div>
         <div class="title">
-            <h1 text-align="center">GOAT FOR YOUR DREAMS</h1>            
+            GOAT FOR YOUR GOALS            
         </div>
 
         <img class="centerImage" src="goatvector.svg">
@@ -129,7 +129,6 @@
 </div>
   </div>
 
-</div>
 
 <div id="profile-modal" class="modal">
   <!-- Modal content -->
@@ -146,9 +145,34 @@
   Enter food 3:<br>
   <input type="text" name="food3"><br>
   </form>
+  <div href="#" class="list-group-item text-left">
+        <a class="btn btn-block btn-primary">
+            Enter!
+        </a>
+      </div>
   </div>
 </div>
 
+
+<div id="feed-modal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+  <div class="modal-header">
+    <span class="close2">&times;</span>
+    <h2>Feed your goat!</h2>
+  </div>
+  <form>
+  What did you eat today?<br>
+  <input type="text" id="imgurl" placeholder="Image URL"/><br>
+  <button id = "image-button" onclick="run(document.getElementById('imgurl').value)">Get tags!</button>
+  </form>
+  <div href="#" class="list-group-item text-left">
+        <a class="btn btn-block btn-primary">
+            Enter!
+        </a>
+      </div>
+  </div>
+</div>
 
 
 
