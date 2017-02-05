@@ -1,11 +1,37 @@
 <!Doctype html>
 <html> 
-    <head> 
+    <head>
         <meta charset="UTF-8">
         <link type="text/css" rel="stylesheet" href="basic.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="shortcut icon" href="goatIcon.png">
+        <head>
+  <link rel="stylesheet" href="animate.min.css">
+</head>
+
+<script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC_fb-4wzTyTf2-09TwAV4OhS3iVGs3ItE",
+    authDomain: "goat-for-your-dreams.firebaseapp.com",
+    databaseURL: "https://goat-for-your-dreams.firebaseio.com",
+    storageBucket: "goat-for-your-dreams.appspot.com",
+    messagingSenderId: "360089384129"
+  };
+  firebase.initializeApp(config);
+
+  var myRoot = firebase.database();
+  function writeGoat() {
+    myRoot.push()
+      originalPoints: null,
+      tags: null
+    });
+  }
+</script>
+
         <script src="main.js"></script>
+
         <title> Goativate Yourself</title> 
     </head>
     <body>
@@ -35,7 +61,7 @@
         </script>
         <div style="position: absolute; left: 15px; top: 20px;"> 
             <a class = "cta" href="#">
-                <img class = "goat" src="sheep.png" width="50" height="50" onclick="DoSomething();" />
+                <img class = "goat" src="sheep.png" id="feed-button" width="50" height="50" onclick="DoSomething();" />
             </a>
         </div>
         <div style="position: absolute; left: 30px; top: 120px;"> 
@@ -57,7 +83,35 @@
             GOAT FOR YOUR GOALS            
         </div>
 
+        
         <img class="centerImage" src="goatvector.svg">
+
+        <div id="foodholder" class="semi-transparent-button"><p id = "food"></p></div>
+  <script type = "text/javascript" src = "https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+  <script>
+    //Declare the API app
+    var app = new Clarifai.App(
+      'vCRFLQr0J3sK95zJa4_mIS8Fgn82ryazO68-grVz',
+      'xS__z6S1DGFWx-Ep0cNmaqo7S6CWKZYM9nq80nda'
+    );
+    //Function called when button is pressed
+    var run = function (imgURL){
+    var image="";
+    image+=imgURL;
+    //Check for images
+    app.models.predict(Clarifai.FOOD_MODEL,image).then(
+    function(response) {
+    // do something with response of image tag
+    document.getElementById("food").innerHTML = response.rawData.outputs[0].data.concepts;
+    document.getElementById("food").innerHTML = response.rawData.outputs[0].data.concepts[0].name;
+    },
+    function(err) {
+    // there was an error if image was not found
+    document.getElementById("food").innerHTML = "Image Not Found :(";
+    }
+  );
+  }
+  </script>
 
 
 
@@ -135,18 +189,18 @@
   <div class="modal-content">
   <div class="modal-header">
     <span class="close1">&times;</span>
-    <h2>Edit your diet!</h2>
+    <h2>Edit your diet</h2>
   </div>
   <form>
   Enter food 1:<br>
-  <input type="text" name="food1"><br>
+  <input type="text" id="food1" name="food1"><br>
   Enter food 2:<br>
-  <input type="text" name="food2"><br>
+  <input type="text" id="food2" name="food2"><br>
   Enter food 3:<br>
-  <input type="text" name="food3"><br>
+  <input type="text" id="food3" name="food3"><br>
   </form>
   <div href="#" class="list-group-item text-left">
-        <button id="enter-food" class="btn btn-block btn-primary">
+        <button id="enter-food" class="btn btn-block btn-primary" onclick="run(writeGoat('food1').value)">
             Enter!
         </button>
       </div>
@@ -166,13 +220,12 @@
   <input type="text" id="imgurl" placeholder="Image URL"/><br>
   </form>
   <div href="#" class="list-group-item text-left">
-        <button id="image-button" class="btn btn-block btn-primary">
+        <button id="image-button" onclick="run(document.getElementById('imgurl').value)" class="btn btn-block btn-primary">
             Enter!
-        </a>
+        </button>
   </div>
   </div>
 </div>
-
 
 
         <br></br>
@@ -255,6 +308,34 @@ window.onclick = function(event) {
         modal1.style.display = "none";
     }
 }
+
+
+        // Get the modal
+var modal2 = document.getElementById('feed-modal');
+
+// Get the button that opens the modal
+var btn2 = document.getElementById("feed-button");
+
+// Get the <span> element that closes the modal
+var span2 = document.getElementsByClassName("close2")[0];
+
+// When the user clicks on the button, open the modal 
+btn2.onclick = function() {
+    modal2.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function() {
+    modal2.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+
 </script>
     </body>
 </html>     
