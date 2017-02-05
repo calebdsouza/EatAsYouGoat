@@ -10,7 +10,7 @@ function Goat(username, password, originalPoints, tags) {
         this.pass = password
     }
     if (originalPoints === null) {
-        this.healthyPoints = 10
+        this.healthyPoints = 1
     } else {
         this.healthyPoints = originalPoints;
     }
@@ -76,8 +76,10 @@ function Goat(username, password, originalPoints, tags) {
     this.levelPic = function () {
         var LEVELS = ['levels/0.png', 'levels/1.png', 'levels/2.png', 'levels/3.png', 'levels/4.png', 'levels/5.png', 'levels/6.png', 'levels/7.png', 'levels/8.png', 'levels/9.png', 'levels/10.png', 'levels/11.png', 'levels/12.png']
         return LEVEL[this.currentLevel]; 
-    };    
+    };
+    (function () {
+        document.getElementById("pg").src=this.levelPic
+    })();
 
 }
-var goat1 = new Goat("", "20", ['apple', 'pear', 'salad'])
-document.getElementById("demo").innerHTML = 
+var goat1 = new Goat("gaotie", "20", ['apple', 'pear', 'salad'])

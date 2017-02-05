@@ -1,0 +1,260 @@
+<!Doctype html>
+<html> 
+    <head> 
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="basic.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="shortcut icon" href="goatIcon.png">
+        <script src="main.js"></script>
+        <title> Goativate Yourself</title> 
+    </head>
+    <body>
+        <img>
+        <script>            
+            // Import Facebook API
+              window.fbAsyncInit = function() {
+                FB.init({
+                  appId      : '161413351026984',
+                  xfbml      : true,
+                  version    : 'v2.8'
+                });
+                FB.AppEvents.logPageView();
+              };
+
+              (function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=161413351026984";
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+        
+            // Check Login status
+            
+           
+        </script>
+        <div style="position: absolute; left: 5px; top: 20px;"> 
+            <a class = "cta" href="#">
+                <img class = "goat" src="sheep.png" width="50" height="50" onclick="DoSomething();" />
+            </a>
+        </div>
+        <div style="position: absolute; left: 20px; top: 120px;"> 
+            <a class="brocoli" href="#">
+                <img class = "broco" src = "broccoli.png" width="50" height="50" onclick = "DoSomething();"/>
+            </a>
+        </div>
+        <div class = "header">
+            
+            <nav>
+                <ul class = "primary_nav" style="list-style: none;">
+                    <li class = "flink"><a id="friends-button" class="semi-transparent-button" href = "#">Friends</a></li>
+                    <li class = "plink"><a id="profile-button" class="semi-transparent-button" href = "#">Profile</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="title">
+            GOAT FOR YOUR GOALS            
+        </div>
+        <div class="div-wrapper">
+            <img id = "bg" class="centerImage" src="goatvector.svg">
+        </div>
+
+
+<!-- friends Modal -->
+<div id="friends-modal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+            <!--- friend list -->
+<link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<div class="container bootstrap snippet">
+  <div class="header">
+    <h3 class="text-muted prj-name">
+        <span class="fa fa-users fa-2x principal-title"></span>
+    </h3>
+  </div>
+
+  <div class="jumbotron list-content">
+    <ul class="list-group">
+      <li href="#" class="list-group-item title">
+        Your Herd
+      </li>
+      <li href="#" class="list-group-item text-left">
+        <img class="img-thumbnail" src="http://bootdey.com/img/Content/User_for_snippets.png">
+        <label class="name">
+            Billy McBeard<br>
+        </label>
+        <label class="pull-right">
+            <a  class="btn btn-success btn-xs glyphicon glyphicon-ok" href="#" title="View"></a>
+            <a  class="btn btn-danger  btn-xs glyphicon glyphicon-trash" href="#" title="Delete"></a>
+            <a  class="btn btn-info  btn-xs glyphicon glyphicon glyphicon-comment" href="#" title="Send message"></a>
+        </label>
+        <div class="break"></div>
+      </li>
+      <li href="#" class="list-group-item text-left">
+          <img class="img-thumbnail"  src="http://bootdey.com/img/Content/user_1.jpg">
+        <label class="name">
+          Bucky Cloven
+        </label>
+        <label class="pull-right">
+            <a  class="btn btn-success btn-xs glyphicon glyphicon-ok" href="#" title="View"></a>
+            <a  class="btn btn-danger  btn-xs glyphicon glyphicon-trash" href="#" title="Delete"></a>
+            <a  class="btn btn-info  btn-xs glyphicon glyphicon glyphicon-comment" href="#" title="Send message"></a>
+        </label>
+        <div class="break"></div>
+      </li>
+      <li href="#" class="list-group-item text-left">
+          <img class="img-thumbnail"  src="http://bootdey.com/img/Content/user_2.jpg">
+          <label class="name">
+            Baaahrbara Kid
+          </label>
+        <label class="pull-right">
+            <a  class="btn btn-success btn-xs glyphicon glyphicon-ok" href="#" title="View"></a>
+            <a  class="btn btn-danger  btn-xs glyphicon glyphicon-trash" href="#" title="Delete"></a>
+            <a  class="btn btn-info  btn-xs glyphicon glyphicon glyphicon-comment" href="#" title="Send message"></a>
+        </label>
+        <div class="break"></div>
+      </li>
+      <li href="#" class="list-group-item text-left">
+        <a class="btn btn-block btn-primary">
+            <i class="glyphicon glyphicon-refresh"></i>
+            Load more...
+        </a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</div>
+  </div>
+
+
+<div id="profile-modal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+  <div class="modal-header">
+    <span class="close1">&times;</span>
+    <h2>Edit your diet!</h2>
+  </div>
+  <form>
+  Enter food 1:<br>
+  <input type="text" name="food1"><br>
+  Enter food 2:<br>
+  <input type="text" name="food2"><br>
+  Enter food 3:<br>
+  <input type="text" name="food3"><br>
+  </form>
+  <div href="#" class="list-group-item text-left">
+        <button id="enter-food" onclick="setList([food1,food2,food3])">
+            Enter!
+        </button>
+      </div>
+  </div>
+</div>
+
+
+<div id="feed-modal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+  <div class="modal-header">
+    <span class="close2">&times;</span>
+    <h2>Feed your goat!</h2>
+  </div>
+  <form>
+  What did you eat today?<br>
+  <input type="text" id="imgurl" placeholder="Image URL"/><br>
+  </form>
+  <div href="#" class="list-group-item text-left">
+        <button id="image-button" class="btn btn-block btn-primary">
+            Enter!
+        </a>
+  </div>
+  </div>
+</div>
+
+
+
+        <br></br>
+        <br>
+        <!--- Facebook Login button -->
+        <div class="fb-login-button" data-width="200" data-max-rows="1000" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false" scope="public_profile" onlogin="checkLoginState();"></div>
+    
+    <br></br>
+        <br>
+        <br>
+        <div
+          class="fb-like"
+          data-share="true"
+          data-width="450"
+          data-show-faces="true">
+        </div>
+<br></br>
+        <br>
+        <br><br></br>
+        <br>
+        <?php
+			session_start();
+			if(empty($_SESSION['visited']){
+				$counter = file_get_contents('/indexhits.txt') + 1;
+				file_put_contents('/indexhits.txt', $counter);
+			}
+			$_SESSION['visited'] = TRUE;
+		?>
+        
+        <script>
+        // Get the modal
+var modal = document.getElementById('friends-modal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("friends-button");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+        // Get the modal
+var modal1 = document.getElementById('profile-modal');
+
+// Get the button that opens the modal
+var btn1 = document.getElementById("profile-button");
+
+// Get the <span> element that closes the modal
+var span1 = document.getElementsByClassName("close1")[0];
+
+// When the user clicks on the button, open the modal 
+btn1.onclick = function() {
+    modal1.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span1.onclick = function() {
+    modal1.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+}
+</script>
+    </body>
+</html>     

@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 
 body {
-	background-image: url('./bg-small.png');
+	background-image: url('Hall%20of%20Background/12.png');
 	background-position: center;
 	background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -112,10 +112,16 @@ div.fb-like
   letter-spacing: 1px;
   transition: all 0.3s ease-out;
 }
-.centerImage
-{
-    display: block;
-    margin: 0 auto;
+
+.div-wrapper {
+    position: relative;
+    height: 800px;
+    width: 100px;
+}
+.div-wrapper img {
+    position: absolute;
+    left: 450px;
+    bottom: -350px;
 }
 
 /* The Modal (background) */
